@@ -1,47 +1,47 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole site, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: BJC Summer Academy - Gold Group
-tagline: 
-description: 
+tagline:
 author: Victoria Phelps
-baseurl: '/bjc-su23-gold' # the subpath of your site, e.g. /blog
-url: 'https://cs10.org' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+baseurl: /bjc-su23-gold # the subpath of your site, e.g. /blog
+url: https://cs10.org
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+
+logo: "./assets/images/bjc.png"
 
 # Theme settings
-remote_theme: just-the-docs/just-the-docs@v0.5.3
+remote_theme: pmarsceill/just-the-docs@v0.3.3
 color_scheme: light
 search_enabled: true
 heading_anchors: true
 permalink: pretty
+aux_links_new_tab: true
+ga_tracking: UA-47210910-1
 external_navigation:
   - title: Snap!
     url: https://snap.berkeley.edu/
-aux_links:
-  Kevin Lin:
-    - 'https://kevinl.info'
-  Just the Class on GitHub:
-    - 'https://github.com/kevinlin1/just-the-class'
 footer_content:
 
+labsurl: https://cs10.org/
+
+###### TODO: UPDATE THESE, CURRENTLY UNUSED
+# This section controlls the interactive google calendar.
+# Should be in MomentJS format
+startDate: 2016-01-17 # First Sunday
+endDate:   2016-05-14 # Last Saturday
+
+# Change the calendar to show Sun-Sat instead of M-F when an exam is near
+questDate: 2016-02-17
+midtermDate: 2016-03-16
+finalDate: 2016-05-10
+# from console.developers.google.com
+# This key can be public and is tied to a users calendar accesses
+# whoever this key belongs to should have access to the CS10 galendars.
+gcalAPIKey: AIzaSyBcbN6F79dPHiGMvftIKZB86A6Ki2eIKZs
+
+###############################################
 # Collections for website data
 collections:
   staffers:
   modules:
-  schedules:
   announcements:
 # Default layouts for each collection type
 defaults:
@@ -50,19 +50,12 @@ defaults:
       type: staffers
     values:
       layout: staffer
-      height: 300
       subpath: '/assets/images/'
-      width: 300
   - scope:
       path: ''
       type: modules
     values:
       layout: module
-  - scope:
-      path: ''
-      type: schedules
-    values:
-      layout: schedule
   - scope:
       path: ''
       type: announcements
@@ -76,3 +69,9 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+plugins:
+  - jekyll-seo-tag
+
+just_the_docs:
+  collections:

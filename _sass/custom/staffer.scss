@@ -1,12 +1,11 @@
 .staffer {
   display: flex;
-  margin: $sp-4 0;
+  margin: $sp-4;
 
   .staffer-image {
     border-radius: 50%;
     height: 100px;
     margin-right: $sp-4;
-    width: auto;
   }
 
   p,
@@ -16,8 +15,6 @@
 
   .staffer-pronouns {
     @extend .label, .text-grey-dk-100, .bg-grey-lt-200;
-
-    user-select: none;
   }
 
   .staffer-meta {

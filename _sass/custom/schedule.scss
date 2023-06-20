@@ -1,3 +1,36 @@
+.schedule-table {
+  border-collapse: collapse;
+
+  td {
+    text-align: center;
+  }
+
+  // just-the-docs classes
+  tbody tr:last-of-type th, tbody tr:last-of-type td,
+  th, td {
+    padding: 0.2rem;
+    min-width: 0px; // Override just-the-docs
+    border: 1.5px solid #3B7EA1;
+  }
+
+  thead > tr > th {
+    background-color: #DDD5C7;
+  }
+
+  tr.today {
+    border: 3px solid gold;
+  }
+
+  tr.even {
+    background-color:rgba(0, 0, 0, .5);
+  }
+
+  .schedule-week-num {
+    width: 5ch;
+  }
+
+}
+
 .schedule {
   @include abstract-card();
   overflow-x: scroll;
@@ -49,7 +82,7 @@
     border-left: $border $border-color;
     flex: 1 0 0;
     margin: 0;
-    min-width: 120px;
+    min-width: 130px;
 
     &:first-of-type {
       border-left: 0;
@@ -93,15 +126,60 @@
     }
 
     &.lecture {
-      background-color: $grey-dk-000;
+      background-color: #de8c8c;
     }
 
-    &.section {
+
+    &.lab-ben {
       background-color: $purple-000;
     }
 
-    &.office-hours {
-      background-color: $blue-000;
+    &.lab-brendan {
+      background-color: $purple-000;
+    }
+
+    &.lab-vaibhav {
+      background-color: $purple-000;
+    }
+
+    &.lab-nick {
+      background-color: $purple-000;
+    }
+
+    &.lab-sarah-and-remote-lab-yishu {
+      background-color: $purple-000;
+    }
+
+    &.lab-jake {
+      background-color: $purple-000;
+    }
+
+    &.lab-kellyann {
+      background-color: $purple-000;
+    }
+
+    &.lab-arrushi {
+      background-color: $purple-000;
+    }
+
+    &.lab-ze{
+      background-color: $purple-000;
+    }
+
+    &.discussion-vedansh {
+      background-color: #91c997;
+    }
+
+    &.discussion-brendan {
+      background-color: #91c997;
+    }
+
+    &.discussion-maddie {
+      background-color: #91c997;
+    }
+
+    &.discussion-deeksha {
+      background-color: #91c997;
     }
   }
 }
